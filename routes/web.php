@@ -21,3 +21,9 @@ Route::get('/', function () {
 Route::get('about', function () {
     return "about";
 });
+
+Route::post('profile', function (Illuminate\Http\Request $request) {
+    //dd($request->all());
+    $request->file('photo')->store('profiles');
+    return redirect('profile');
+});
