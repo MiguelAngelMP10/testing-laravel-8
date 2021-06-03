@@ -22,4 +22,4 @@ Route::get('about', function () {
     return "about";
 });
 Route::view('profile', 'profile');
-Route::post('profile', [App\Http\Controllers\ProfileController::class. 'upload']);
+Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']);
